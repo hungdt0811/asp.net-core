@@ -1,0 +1,14 @@
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.deps.json
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.runtimeconfig.json
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.dll
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.pdb
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.csproj.AssemblyReference.cache
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.AssemblyInfoInputs.cache
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.AssemblyInfo.cs
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.csproj.CoreCompileInputs.cache
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.dll
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\refint\eShopSolution.Data.dll
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.pdb
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.genruntimeconfig.cache
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\ref\eShopSolution.Data.dll
