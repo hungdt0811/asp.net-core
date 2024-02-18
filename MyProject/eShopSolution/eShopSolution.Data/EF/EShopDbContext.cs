@@ -11,10 +11,11 @@ namespace eShopSolution.Data.EF
     public class EShopDbContext : IdentityDbContext<User,Role,Guid>
     {
         private string ConnectString = @"
-            Data Source = localhost,1433;
+            Data Source = DESKTOP-HS1TEUQ;
             Initial Catalog = eShopDB;
-            UID = sa;
-            PWD = Password123;
+            UID=sa;
+            PWD=123;
+            trusted_connection=true;
         ";
         public DbSet<Product> Products { get; set; } = null!;
         public DbSet<ProductTranslation> ProductTranslations { get; set; } = null!;

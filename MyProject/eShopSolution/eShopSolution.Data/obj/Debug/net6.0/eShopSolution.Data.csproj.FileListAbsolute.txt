@@ -27,3 +27,4 @@ D:\Hùng\New folder\MyProject\eShopSolution\eShopSolution.Data\bin\Debug\net6.0\
 D:\Hùng\New folder\MyProject\eShopSolution\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.pdb
 D:\Hùng\New folder\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.genruntimeconfig.cache
 D:\Hùng\New folder\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\ref\eShopSolution.Data.dll
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.sourcelink.json

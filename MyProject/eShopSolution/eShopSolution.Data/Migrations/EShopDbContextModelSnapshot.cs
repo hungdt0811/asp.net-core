@@ -353,10 +353,6 @@ namespace eShopSolution.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("SeoAlias")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Stock")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
@@ -375,10 +371,9 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2024, 2, 11, 19, 37, 10, 753, DateTimeKind.Local).AddTicks(6315),
+                            DateCreated = new DateTime(2024, 2, 18, 20, 46, 1, 596, DateTimeKind.Local).AddTicks(4324),
                             OriginalPrice = 100000m,
                             Price = 200000m,
-                            SeoAlias = "",
                             Stock = 0,
                             ViewCount = 0
                         });
@@ -451,7 +446,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductTranslation");
+                    b.ToTable("ProductTranslations");
 
                     b.HasData(
                         new
@@ -516,7 +511,7 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "214d25ad-efcb-45d9-ba49-a044eed2d753",
+                            ConcurrencyStamp = "52b5e07c-1487-4346-85af-ad1f23113cad",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -651,7 +646,7 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0c4f33b6-9d69-4012-9ef2-b9d8f54a329b",
+                            ConcurrencyStamp = "b7a931e6-d170-4da5-a2bd-4aea6aa511a9",
                             Dob = new DateTime(1997, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "hungdt0811@gmail.com",
                             EmailConfirmed = true,
@@ -660,7 +655,7 @@ namespace eShopSolution.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "hungdt0811@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAELVNI5Patm7pSliHpl8jXZl8jFMN920aiBwB7Bioszzf8KV/YVJEXKKLMHxKv9hc9A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEW4e95pG7a6CLNW0TZFlNvPSu6wcNfV5o3obfw0C7NDZfZ1HCki+S68WrnAwRgb+Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

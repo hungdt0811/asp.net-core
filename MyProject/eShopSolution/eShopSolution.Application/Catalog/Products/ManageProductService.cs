@@ -22,9 +22,9 @@ namespace eShopSolution.Application.Catalog.Products
         }
 
         // Phương thức xử lý addViewCount
-        public async Task AddViewCount(int ProductId)
+        public async Task AddViewCount(int productId)
         {
-            var product = await _context.Products.FindAsync(ProductId); // Lấy ra product
+            var product = await _context.Products.FindAsync(productId); // Lấy ra product
             product.ViewCount += 1;
             await _context.SaveChangesAsync();
         }
@@ -58,16 +58,16 @@ namespace eShopSolution.Application.Catalog.Products
         }
 
         // Phương thức xử lý xóa product
-        public async Task<int> Delete(int ProductId)
+        public async Task<int> Delete(int productId)
         {
-            var product = await _context.Products.FindAsync(ProductId); // Tìm kiếm product theo giá trị của khóa chính
-            if (product == null) throw new EShopException($"Cannot find a product: {ProductId}");
+            var product = await _context.Products.FindAsync(productId); // Tìm kiếm product theo giá trị của khóa chính
+            if (product == null) throw new EShopException($"Cannot find a product: {productId}");
 
             _context.Products.Remove(product);        // Xóa product khỏi database
             return await _context.SaveChangesAsync(); // Trả về số bản ghi được delete
         }
 
-        public async Task<List<ProductViewModel>> GetAll()
+        public Task<List<ProductViewModel>> GetAll()
         {
             throw new NotImplementedException();
         }
@@ -76,19 +76,19 @@ namespace eShopSolution.Application.Catalog.Products
         public async Task<PageResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
         {
             // Select: Lấy ra tập hợp
-            var query = from product in _context.Products
-                        join productTranslation in _context.ProductTranslations on product.Id equals productTranslation.ProductId
-                        join productInCategory in _context.ProductInCategories on product.Id equals productInCategory.ProductId
-                        join category in _context.Categories on productInCategory.CategoryId equals category.Id
-                        select new { product , productTranslation, productInCategory };
+            var query = from p in _context.Products
+                        join pt in _context.ProductTranslations on p.Id equals pt.ProductId
+                        join pic in _context.ProductInCategories on p.Id equals pic.ProductId
+                        join c in _context.Categories on pic.CategoryId equals c.Id
+                        select new { p , pt, pic };
             // Filter: Tìm kiếm keyword theo tên sản phẩm và tên category
             if(!string.IsNullOrEmpty(request.Keyword)) // Kiểm tra xem chuỗi keyword có null hay không
             {
-                query = query.Where(x => x.productTranslation.Name.Contains(request.Keyword)); // Tìm kiếm theo tên sản phẩm
+                query = query.Where(x => x.pt.Name.Contains(request.Keyword)); // Tìm kiếm theo tên sản phẩm
             }
             if(request.CategoryIds.Count > 0) // Kiểm tra xem 
             {
-                query = query.Where(p => request.CategoryIds.Contains(p.productInCategory.CategoryId));
+                query = query.Where(p => request.CategoryIds.Contains(p.pic.CategoryId));
             }
             // Paging (Phân trang)
             int totalRecord = await query.CountAsync();
@@ -96,19 +96,19 @@ namespace eShopSolution.Application.Catalog.Products
                 .Take(request.PageSize)
                 .Select(x => new ProductViewModel()
                 {   
-                    Id = x.product.Id,
-                    Name = x.productTranslation.Name,
-                    DateCreated = x.product.DateCreated,
-                    Description = x.productTranslation.Description,
-                    Details = x.productTranslation.Details,
-                    LanguageId = x.productTranslation.LanguageId,
-                    OriginalPrice = x.product.OriginalPrice,
-                    Price = x.product.Price,
-                    SeoAlias = x.productTranslation.SeoAlias,
-                    SeoDescription = x.productTranslation.SeoDescription,
-                    SeoTitle = x.productTranslation.SeoTitle,
-                    Stock = x.product.Stock,
-                    ViewCount = x.product.ViewCount,
+                    Id = x.p.Id,
+                    Name = x.pt.Name,
+                    DateCreated = x.p.DateCreated,
+                    Description = x.pt.Description,
+                    Details = x.pt.Details,
+                    LanguageId = x.pt.LanguageId,
+                    OriginalPrice = x.p.OriginalPrice,
+                    Price = x.p.Price,
+                    SeoAlias = x.pt .SeoAlias,
+                    SeoDescription = x.pt.SeoDescription,
+                    SeoTitle = x.pt.SeoTitle,
+                    Stock = x.p.Stock,
+                    ViewCount = x.p.ViewCount,
                 }).ToListAsync();
 
             // Select and projection

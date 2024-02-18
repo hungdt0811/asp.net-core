@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\hungd\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\hungt\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Hùng\\New folder\\MyProject\\eShopSolution\\eShopSolution.Web\\eShopSolution.Web.csproj",
+      "projectUniqueName": "D:\\Hùng\\TEDU\\MyProject\\eShopSolution\\eShopSolution.Web\\eShopSolution.Web.csproj",
       "projectName": "eShopSolution.Web",
-      "projectPath": "D:\\Hùng\\New folder\\MyProject\\eShopSolution\\eShopSolution.Web\\eShopSolution.Web.csproj",
-      "packagesPath": "C:\\Users\\hungd\\.nuget\\packages\\",
-      "outputPath": "D:\\Hùng\\New folder\\MyProject\\eShopSolution\\eShopSolution.Web\\obj\\",
+      "projectPath": "D:\\Hùng\\TEDU\\MyProject\\eShopSolution\\eShopSolution.Web\\eShopSolution.Web.csproj",
+      "packagesPath": "C:\\Users\\hungt\\.nuget\\packages\\",
+      "outputPath": "D:\\Hùng\\TEDU\\MyProject\\eShopSolution\\eShopSolution.Web\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hungd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\hungt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
