@@ -11,7 +11,6 @@ namespace eShopSolution.Data.Configurations
             builder.ToTable("Products");
             builder.HasKey(p => p.Id);  // PK
 
-            builder.Property(p => p.SeoAlias).IsRequired(); // not null
             builder.Property(p => p.Stock)
                 .IsRequired()               // not null
                 .HasDefaultValue<int>(0);   // default value

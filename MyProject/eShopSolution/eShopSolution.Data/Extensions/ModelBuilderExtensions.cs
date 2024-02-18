@@ -90,7 +90,6 @@ namespace eShopSolution.Data.Extensions
                     Price = 200000,
                     Stock = 0,
                     ViewCount = 0,
-                    SeoAlias = ""
                 }
             ); ;
 
