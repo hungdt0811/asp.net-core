@@ -12,7 +12,7 @@ namespace eShopSolution.Application.Catalog.Products
     // interface này chuyên chỉ chứa phương thức dành cho phần bên ngoài (client)
     public interface IPublicProductService
     {
-        PageResult<ProductViewModel> GetAllByCategoryId(GetProductPagingRequest request);
+        Task<PageResult<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request);
 
     }
 }

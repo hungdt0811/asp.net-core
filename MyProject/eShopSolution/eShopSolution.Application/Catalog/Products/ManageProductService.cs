@@ -67,11 +67,6 @@ namespace eShopSolution.Application.Catalog.Products
             return await _context.SaveChangesAsync(); // Trả về số bản ghi được delete
         }
 
-        public Task<List<ProductViewModel>> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
         // Phương thức xử lý tìm kiếm và phân trang
         public async Task<PageResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
         {
@@ -81,17 +76,20 @@ namespace eShopSolution.Application.Catalog.Products
                         join pic in _context.ProductInCategories on p.Id equals pic.ProductId
                         join c in _context.Categories on pic.CategoryId equals c.Id
                         select new { p , pt, pic };
-            // Filter: Tìm kiếm keyword theo tên sản phẩm và tên category
+
+            // Filter: Tìm kiếm keyword theo tên sản phẩm
             if(!string.IsNullOrEmpty(request.Keyword)) // Kiểm tra xem chuỗi keyword có null hay không
             {
                 query = query.Where(x => x.pt.Name.Contains(request.Keyword)); // Tìm kiếm theo tên sản phẩm
             }
-            if(request.CategoryIds.Count > 0) // Kiểm tra xem 
+            // Tìm kiếm keyword theo tên sản phẩm và tên category
+            if (request.CategoryIds.Count > 0) // Kiểm tra xem trong request.CategoryIds có chứa ID danh mục nào không
             {
                 query = query.Where(p => request.CategoryIds.Contains(p.pic.CategoryId));
             }
+
             // Paging (Phân trang)
-            int totalRecord = await query.CountAsync();
+            int totalRecord = await query.CountAsync(); // Lấy ra tổng số bản ghi mà query trả về
             var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
                 .Take(request.PageSize)
                 .Select(x => new ProductViewModel()
@@ -122,17 +120,39 @@ namespace eShopSolution.Application.Catalog.Products
 
         public async Task<int> Update(ProductUpdateRequest request)
         {
-            throw new NotImplementedException();
+            var product = await _context.Products.FindAsync(request.Id); // Lấy ra product có Id được truyền trong request
+            var productTranlations = await _context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == request.Id && x.LanguageId == request.LanguageId); // Lấy ra productTranslation có Id được truyền trong request và chỉ update cho 1 ngôn ngữ
+            if (product == null || productTranlations == null) throw new EShopException($"Can't find a product with ID: {request.Id}");
+
+            productTranlations.Name = request.Name;
+            productTranlations.SeoTitle = request.SeoTitle;
+            productTranlations.SeoDescription = request.SeoDescription;
+            productTranlations.SeoAlias = request.SeoAlias;
+            productTranlations.Name = request.Name;
+            productTranlations.Description = request.Description;
+            productTranlations.Details = request.Details;
+
+            return await _context.SaveChangesAsync();
         }
 
-        public Task<bool> UpdatePrice(int ProductId, decimal NewPrice)
+        public async Task<bool> UpdatePrice(int ProductId, decimal NewPrice)
         {
-            throw new NotImplementedException();
+            var product = await _context.Products.FindAsync(ProductId); // Lấy ra product có Id tương ứng
+            if (product == null) throw new EShopException($"Can't find a product with ID: {ProductId}");
+
+            product.Price = NewPrice;
+
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public Task<bool> UpdateStock(int ProductId, decimal addQuantity)
+        public async Task<bool> UpdateStock(int ProductId, int addQuantity)
         {
-            throw new NotImplementedException();
+            var product = await _context.Products.FindAsync(ProductId); // Lấy ra product có Id tương ứng
+            if (product == null) throw new EShopException($"Can't find a product with ID: {ProductId}");
+
+            product.Stock += addQuantity;
+
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }
