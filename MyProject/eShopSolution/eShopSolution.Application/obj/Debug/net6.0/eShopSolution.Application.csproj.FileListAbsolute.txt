@@ -9,3 +9,10 @@ D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\obj\Debug\net6.0
 D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\obj\Debug\net6.0\refint\eShopSolution.Application.dll
 D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.pdb
 D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\obj\Debug\net6.0\ref\eShopSolution.Application.dll
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Data.dll
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Utilities.dll
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Data.pdb
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Utilities.pdb
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.csproj.AssemblyReference.cache
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.sourcelink.json
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.csproj.CopyComplete

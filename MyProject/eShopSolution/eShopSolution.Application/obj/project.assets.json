@@ -923,6 +923,16 @@
         "runtime": {
           "bin/placeholder/eShopSolution.Utilities.dll": {}
         }
+      },
+      "eShopSolution.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/eShopSolution.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/eShopSolution.ViewModels.dll": {}
+        }
       }
     }
   },
@@ -2426,12 +2436,18 @@
       "type": "project",
       "path": "../eShopSolution.Utilities/eShopSolution.Utilities.csproj",
       "msbuildProject": "../eShopSolution.Utilities/eShopSolution.Utilities.csproj"
+    },
+    "eShopSolution.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../eShopSolution.ViewModels/eShopSolution.ViewModels.csproj",
+      "msbuildProject": "../eShopSolution.ViewModels/eShopSolution.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "eShopSolution.Data >= 1.0.0",
-      "eShopSolution.Utilities >= 1.0.0"
+      "eShopSolution.Utilities >= 1.0.0",
+      "eShopSolution.ViewModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2466,6 +2482,9 @@
             },
             "D:\\Hùng\\TEDU\\MyProject\\eShopSolution\\eShopSolution.Utilities\\eShopSolution.Utilities.csproj": {
               "projectPath": "D:\\Hùng\\TEDU\\MyProject\\eShopSolution\\eShopSolution.Utilities\\eShopSolution.Utilities.csproj"
+            },
+            "D:\\Hùng\\TEDU\\MyProject\\eShopSolution\\eShopSolution.ViewModels\\eShopSolution.ViewModels.csproj": {
+              "projectPath": "D:\\Hùng\\TEDU\\MyProject\\eShopSolution\\eShopSolution.ViewModels\\eShopSolution.ViewModels.csproj"
             }
           }
         }

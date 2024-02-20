@@ -28,3 +28,4 @@ D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Web\obj\Debug\net6.0\refint\
 D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Web\obj\Debug\net6.0\eShopSolution.Web.pdb
 D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Web\obj\Debug\net6.0\eShopSolution.Web.genruntimeconfig.cache
 D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Web\obj\Debug\net6.0\ref\eShopSolution.Web.dll
+D:\Hùng\TEDU\MyProject\eShopSolution\eShopSolution.Web\obj\Debug\net6.0\eShopSolution.Web.sourcelink.json

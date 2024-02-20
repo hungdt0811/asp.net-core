@@ -27,6 +27,7 @@ namespace eShopSolution.Data.EF
         public DbSet<Contact> Contacts { get; set; } = null!;
         public DbSet<Language> Languages { get; set; } = null!;
         public DbSet<Order> Orders { get; set; } = null!;
+        public DbSet<ProductImage> ProductImages { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

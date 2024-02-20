@@ -13,5 +13,6 @@
         public ICollection<OrderDetail> OrderDetails { get; set; } = null!;
         public ICollection<ProductTranslation> ProductTranslations { get; set; } = null!;
         public ICollection<Cart> Carts { get; set; } = null!;
+        public ICollection<ProductImage> ProductImages { get; set; }
     } 
 }
